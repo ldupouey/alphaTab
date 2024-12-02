@@ -1548,4 +1548,12 @@ export class AlphaTabApiBase<TSettings> {
         (this.settingsUpdated as EventEmitter).trigger();
         this.uiFacade.triggerEvent(this.container, 'settingsUpdated', null);
     }
+
+    public get selectionStart() : SelectionInfo|null{
+        return this._selectionStart;
+    }
+
+    public get selectionEnd() : SelectionInfo|null{
+        return this._selectionEnd;
+    }
 }
