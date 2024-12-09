@@ -607,7 +607,7 @@ export class AlphaTabApiBase<TSettings> {
         this.setupPlayerEvents();
     }
 
-    private loadMidiForScore(): void {
+    public loadMidiForScore(): void { // changed to public for TABASCO
         if (!this.player || !this.score || !this.player.isReady) {
             return;
         }
