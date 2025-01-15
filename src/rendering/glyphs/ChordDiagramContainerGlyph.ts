@@ -11,6 +11,8 @@ export class ChordDiagramContainerGlyph extends RowContainerGlyph {
         if (chord.strings.length > 0) {
             let chordDiagram: ChordDiagramGlyph = new ChordDiagramGlyph(0, 0, chord);
             chordDiagram.renderer = this.renderer;
+            console.log("top :")
+            console.log(this.renderer.resources)
             chordDiagram.doLayout();
             this.glyphs!.push(chordDiagram);
         }
